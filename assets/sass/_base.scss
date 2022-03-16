@@ -1,0 +1,101 @@
+//Colors
+$alice-blue: rgba(235, 249, 255, 1);
+$blaze-orange: rgba(255, 109, 0, 1);
+$cyber-yellow: rgba(252, 209, 42, 1);
+$oxford-blue: rgba(1, 36, 84, 1);
+$USAFA-blue: rgba(4, 78, 165, 1);
+
+//Typography
+
+//Font-families
+$font-1: 'Montserrat';
+$font-2: 'Open Sans';
+
+//Typo-scale
+//Desktop
+$d-h1:68px;
+$d-h2:36px;
+$d-h3:28px;
+$d-body:16px;
+$d-button:16px;
+$d-voce-menu:16px;
+
+//Mobile
+$m-h1:36px;
+$m-h2:28px;
+$m-h3:24px;
+$m-body:18px;
+$m-button:18px;
+$m-voce-menu:30px;
+
+$outline:12px;
+
+h1{
+  font:{
+    family:$font-1;
+    style:normal;
+    weight:bold;
+  }
+  line-height: 1;
+  color:black;
+  //font-size: 68px;
+}
+
+h2{
+  font:{
+    family:$font-1;
+    style:normal;
+    weight:800;
+  }
+  text-transform: uppercase;
+  text-align: center;
+  color:$oxford-blue;
+  margin-bottom: 6rem;
+}
+
+h3{
+  font:{
+    family:$font-1;
+    style:normal;
+    weight:500;
+  }
+}
+
+body{
+  font:{
+    family:$font-1;
+    style:normal;
+    weight:normal;
+  }
+}
+
+.button{
+  font:{
+    family:$font-1;
+    style:normal;
+    weight:bold;
+  }
+}
+
+.nav-link{
+  font:{
+    family:$font-2;
+    style:normal;
+    weight:600;
+  }
+  text-transform: uppercase;
+
+}
+
+.categoria {
+  font:{
+    font-family: $font-1;
+    style: normal;
+    weight:600;
+    size: 12px;
+  }
+  color:grey;
+  border-left: 4px grey solid;
+  padding-left: 4px;
+
+}
