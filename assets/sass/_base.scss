@@ -30,23 +30,26 @@ $m-voce-menu:30px;
 
 $outline:12px;
 
-h1{
-  font:{
-    family:$font-1;
-    style:normal;
-    weight:bold;
+@mixin font-properties($family,$style,$weight){
+  font :{
+    family:$family;
+    style:$style;
+    weight:$weight;
   }
+}
+
+@mixin horizontal-alignment {
+    text-align: center;
+}
+
+h1{
+  @include font-properties ($font-1, normal, bold);
   line-height: 1;
   color:black;
-  //font-size: 68px;
 }
 
 h2{
-  font:{
-    family:$font-1;
-    style:normal;
-    weight:800;
-  }
+  @include font-properties ($font-1, normal, 800);
   text-transform: uppercase;
   text-align: center;
   color:$oxford-blue;
@@ -54,48 +57,41 @@ h2{
 }
 
 h3{
-  font:{
-    family:$font-1;
-    style:normal;
-    weight:500;
-  }
+  @include font-properties ($font-1, normal, 500);
 }
 
 body{
-  font:{
-    family:$font-1;
-    style:normal;
-    weight:normal;
-  }
+  @include font-properties ($font-1, normal, normal);
 }
 
 .button{
-  font:{
-    family:$font-1;
-    style:normal;
-    weight:bold;
-  }
+  @include font-properties ($font-1, normal, bold);
 }
 
 .nav-link{
-  font:{
-    family:$font-2;
-    style:normal;
-    weight:600;
-  }
+  @include font-properties ($font-2, normal, 600);
   text-transform: uppercase;
-
 }
 
 .categoria {
-  font:{
-    font-family: $font-1;
-    style: normal;
-    weight:600;
-    size: 12px;
-  }
+  @include font-properties ($font-1, normal, 600);
+  font-size: $outline;
   color:grey;
   border-left: 4px grey solid;
   padding-left: 4px;
 
+}
+
+.button, button {
+  background-color: $blaze-orange;
+  color:white;
+  @include font-properties ($font-1, normal, 700);
+  padding: 12px;
+  border-radius: 8px;
+  border:none;
+}
+
+.button:hover, button:hover{
+  background-color: #bf5200;
+  color:white;
 }

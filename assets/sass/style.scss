@@ -1,25 +1,36 @@
-@import '_base';
+  @import '_base';
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+  // ---------------------GENERAL---------------------
 
-.outline{
-  font-size: $outline
-}
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
+  a {
+    text-decoration: none;
+  }
 
-a {
-  text-decoration: none;
-}
-
-li {
+  li {
     list-style: none;
-}
+  }
 
-.navbar {
+  .section{
+    margin-top:5rem;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+
+  footer {
+    padding: 0.5rem 0;
+    background-color: $oxford-blue;
+    @include horizontal-alignment;
+    color: white;
+  }
+
+  // ---------------------MENU---------------------
+  .navbar {
     position: fixed;
     top:0;
     display: flex;
@@ -29,32 +40,33 @@ li {
     width: 100%;
     background-color: white;
     z-index: 1;
-}
+  }
 
-.nav-menu{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0;
-}
+  .nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+  }
 
-.nav-item {
+  .nav-item {
     margin-left: 5rem;
-}
+  }
 
-a.nav-link, a.nav-link:hover {
-  color: black;
-}
+  a.nav-link, a.nav-link:hover {
+    color: black;
+  }
 
- .active{
+  .active{
     background-color: $cyber-yellow;
     color:white;
-}
+  }
 
-.hamburger{
-  display: none;
-}
-.bar {
+  .hamburger{
+    display: none;
+  }
+
+  .bar {
     display: block;
     width: 25px;
     height: 3px;
@@ -62,237 +74,125 @@ a.nav-link, a.nav-link:hover {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: #101010;
-}
+  }
 
+  #myBtn{
+    display: none;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    z-index: 99;
+    border-radius: 3rem;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width:15vw;
+    max-width: 80px;
+    height:15vw;
+    max-height:80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
-.subtitle {
-    margin-top: 1.5rem;
-    margin-bottom: 5rem;
-}
-.section{
-  margin-top:5rem;
-  padding-top: 8rem;
-  padding-bottom: 4rem;
-}
+  // --------------------- HERO ---------------------
 
-#about{
-  background-color:$oxford-blue;
-}
+  .subtitle {
+      margin-top: 1.5rem;
+      margin-bottom: 4rem;
+  }
 
-#about h2{
-  color: $cyber-yellow;
-}
+  .hero-image{
+    width:87.5%;
+  }
 
-.skills-section p, #about h3{
-  color: white;
-}
+  //--------------------- ABOUT ---------------------
+  #about{
+    background-color:$oxford-blue;
+  }
 
-#contacts{
-  background-color:$alice-blue;
-}
+  #about h2{
+    color: $cyber-yellow;
+  }
 
-.contacts-list{
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-}
+  .bio{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width:540px;
+    height:fit-content;
+    margin-bottom: 3rem;
+  }
+
+  .header-bio{
+    font-weight: bolder;
+  }
+
+  .skills-section p, #about h3{
+    color: white;
+  }
+
+  .skill-title{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    @include horizontal-alignment;
+  }
+
+  .skills{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+
+  .skills p{
+    width: 125px;
+    @include horizontal-alignment;
+  }
+
+  .resume{
+    margin-top:8rem;
+    color:white;
+    @include horizontal-alignment;
+  }
+
+  //--------------------- PORTFOLIO ---------------------
+
+  .card-portfolio{
+    width: 90%;
+    height: 322px;
+    background-color: #C4C4C4;
+    border-radius: 1rem;
+    position: relative;
+    margin: 3rem auto;
+  }
+
+  .card-info{
+    position: absolute;
+    overflow-wrap: break-word;
+  }
+
+  //--------------------- CONTACTS ---------------------
+
+  #contacts{
+    background-color:$alice-blue;
+  }
+
+  #contacts p{
+    @include horizontal-alignment;
+  }
 
   #contacts img{
     margin-right: 1rem;
   }
 
-.button, button {
-  background-color: $blaze-orange;
-  color:white;
-  font: {
-    family: $font-1;
-    style: normal;
-    weight: 700;
-  }
-  padding: 12px;
-  border-radius: 8px;
-  border:none;
-}
-
-.button:hover, button:hover{
-  background-color: #bf5200;
-  color:white;
-}
-
-.bio{
-  background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width:540px;
-  height:fit-content;
-  margin-bottom: 3rem;
-}
-
-.header-bio{
-  font-weight: bolder;
-}
-.resume{
-  margin-top:8rem;
-  color:white;
-}
-
-.card-portfolio{
-  width: 90%;
-  height: 322px;
-  background-color: #C4C4C4;
-  border-radius: 16px;
-  position: relative;
-  margin: 3rem auto;
-}
-
-//Valido solo per desktop
-// .card-info{
-//   position: absolute;
-//   top:50%;
-//   left:62.5%;
-//   -ms-transform: translateY(-50%);
-//   transform: translateY(-50%);
-//   overflow-wrap: break-word;
-//   width: 27.5%;
-// }
-.card-info{
-  position: absolute;
-  overflow-wrap: break-word;
-}
-
-
-.center{
-  text-align: center;
-}
-
-
-.skill-title{
-  text-transform: uppercase;
-  font-size: 24px;
-}
-
-.skills{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-bottom: 4rem;
-}
-
-.skill-title{
-  text-align: center;
-  margin-bottom: 4rem;
-}
-.skills p{
-  width: 125px;
-  text-align: center;
-}
-
-.skill-with-icon{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-footer {
-  padding: 0.5rem 0;
-  background-color: $oxford-blue;
-  text-align: center;
-  color: white;
-}
-/* Mobile Styles */
-@media only screen and (max-width: 768px) {
-  h1{
-    font-size: $m-h1
-  }
-  h2{
-    font-size: $m-h2
-  }
-  h3{
-    font-size: $m-h3;
-  }
-  body{
-    font-size: $m-body
-  }
-  .button{
-    font-size: $m-button
-  }
-  .nav-link{
-    font-size: $m-voce-menu
+  .contacts-list{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
   }
 
-  .nav-menu {
-     position: fixed;
-     left: -100%;
-     top: 4rem;
-     flex-direction: column;
-     background-color: #fff;
-     width: 100%;
-     height: 100vh;
-     justify-content: center;
-     text-align: center;
-     transition: 0.3s;
-     padding-left: 0;
- }
-
- .nav-menu.active {
-     left: 0;
- }
-
- .nav-item {
-     margin: 2.5rem 0;
- }
-
- .hamburger {
-     display: block;
-     cursor: pointer;
- }
-
- .hamburger.active .bar:nth-child(2) {
-     opacity: 0;
- }
-
- .hamburger.active .bar:nth-child(1) {
-     transform: translateY(8px) rotate(45deg);
- }
-
- .hamburger.active .bar:nth-child(3) {
-     transform: translateY(-8px) rotate(-45deg);
- }
-
-  #hero{
-    text-align:center;
-  }
-
-  .hero-image{
-    max-width: 280px;
-    background-color: grey;
-    border-radius: 50%;
-    margin: 0 auto;
-  }
-
-  .skills img, #contacts img{
-    max-width: 56px;
-    text-align: center;
-  }
-
-  .portfolio-card-header{
-    margin-bottom: 32px;
-  }
-
-  .card-info{
-    bottom:10%;
-    left:10%;
-    width:80%;
-  }
-
-  .project-title{
-      margin: 16px 0 8px 0;
-  }
-
-}
-
-/*Tablet Style*/
-@media only screen and (min-width: 769px) and (max-width:960px) {
-
+  /* Mobile Styles */
+  @media only screen and (max-width: 768px) {
     h1{
       font-size: $m-h1
     }
@@ -308,91 +208,177 @@ footer {
     .button{
       font-size: $m-button
     }
+    .nav-link{
+      font-size: $m-voce-menu
+    }
 
+    .nav-menu {
+     position: fixed;
+     left: -100%;
+     top: 4rem;
+     flex-direction: column;
+     background-color: #fff;
+     width: 100%;
+     height: 100vh;
+     justify-content: center;
+     @include horizontal-alignment;
+     transition: 0.3s;
+     padding-left: 0;
+   }
 
+   .nav-menu.active {
+     left: 0;
+   }
 
-  .hero-image{
-    max-width: 220px;
-    background-color: grey;
-    border-radius: 50%;
-    margin: 0 auto;
-    float: right;
-  }
+   .nav-item {
+     margin: 2.5rem 0;
+   }
 
-  .bio{
-    margin-left: auto;
-    margin-right: auto;
-  }
+   .hamburger {
+     display: block;
+     cursor: pointer;
+   }
 
-  .skills img, #contacts img{
-    max-width: 72px;
-    text-align: center;
-  }
-  .portfolio-card-header{
-    margin-bottom: 36px;
-  }
+   .hamburger.active .bar:nth-child(2) {
+     opacity: 0;
+   }
 
-  .card-info{
-    top:50%;
-    left:52.5%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 37.5%;
-  }
+   .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+   }
 
-  .project-title{
-    margin: 24px 0 16px 0;
-  }
-}
+   .hamburger.active .bar:nth-child(3) {
+     transform: translateY(-8px) rotate(-45deg);
+   }
 
-/* Desktop Styles */
-@media only screen and (min-width: 961px) {
+    #hero{
+      @include horizontal-alignment;
+    }
 
-  h1{
-    font-size: $d-h1
-  }
-  h2{
-    font-size: $d-h2
-  }
-  h3{
-    font-size: $d-h3;
-  }
-  body{
-    font-size: $d-body
-  }
+    .skills img, #contacts img{
+      max-width: 56px;
+      @include horizontal-alignment;
+    }
 
-  .hero-image{
-    max-width: 320px;
-    background-color: grey;
-    border-radius: 50%;
-    margin: 0 auto;
-    float: right;
-  }
-  .button{
-    font-size: $d-button
-  }
-  .nav-link{
-    font-size: $d-voce-menu
-  }
+    .portfolio-card-header{
+      margin-bottom: 2rem;
+    }
 
+    .card-info{
+      bottom:10%;
+      left:10%;
+      width:80%;
+    }
 
-  .skills img, #contacts img{
-    max-width: 48px;
+    .project-title{
+        margin: 1rem 0 0.5rem 0;
+    }
+
   }
 
-  .portfolio-card-header{
-    margin-bottom: 48px;
+  /*Tablet Style*/
+  @media only screen and (min-width: 769px) and (max-width:960px) {
+
+      h1{
+        font-size: $m-h1
+      }
+      h2{
+        font-size: $m-h2
+      }
+      h3{
+        font-size: $m-h3;
+      }
+      body{
+        font-size: $m-body
+      }
+      .button{
+        font-size: $m-button
+      }
+
+    .hero-image{
+      float: right;
+      position: relative;
+      top: -20%;
+    }
+
+    .bio{
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .skills img, #contacts img{
+      max-width: 72px;
+      @include horizontal-alignment;
+    }
+
+    .portfolio-card-header{
+      margin-bottom: 2rem;
+    }
+
+    .card-info{
+      top:50%;
+      left:52.5%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 37.5%;
+    }
+
+    .project-title{
+      margin: 1.5rem 0 1rem 0;
+    }
   }
 
-  .card-info{
-    top:50%;
-    left:52.5%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 37.5%;
-  }
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
 
-  .project-title {
-    margin: 24px 0 16px 0;
+    h1{
+      font-size: $d-h1
+    }
+    h2{
+      font-size: $d-h2
+    }
+    h3{
+      font-size: $d-h3;
+    }
+    body{
+      font-size: $d-body
+    }
+
+    .hero-image{
+      position: relative;
+      top: -20%;
+      float: right;
+    }
+    .button{
+      font-size: $d-button
+    }
+    .nav-link{
+      font-size: $d-voce-menu
+    }
+
+    .skills img, #contacts img{
+      max-width: 48px;
+      max-height: 48px;
+    }
+
+    .languages{
+      flex-direction: column;
+      align-content: center;
+    }
+
+    .portfolio-card-header{
+      margin-bottom: 3rem;
+    }
+
+    .card-info{
+      top:50%;
+      left:52.5%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 37.5%;
+    }
+
+    .project-title {
+      margin: 1.5rem 0 1rem 0;
+    }
   }
-}
