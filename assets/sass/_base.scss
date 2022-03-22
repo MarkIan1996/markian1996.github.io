@@ -42,6 +42,10 @@ $outline:12px;
     text-align: center;
 }
 
+@mixin category-border ($cat){
+  border-left: 0.5rem $cat solid;
+}
+
 h1{
   @include font-properties ($font-1, normal, bold);
   line-height: 1;
@@ -57,7 +61,7 @@ h2{
 }
 
 h3{
-  @include font-properties ($font-1, normal, 500);
+  @include font-properties ($font-1, normal, 700);
 }
 
 body{
@@ -76,10 +80,8 @@ body{
 .categoria {
   @include font-properties ($font-1, normal, 600);
   font-size: $outline;
-  color:grey;
-  border-left: 4px grey solid;
-  padding-left: 4px;
-
+  padding-left: 0.25rem;
+  color: white;
 }
 
 .button, button {
